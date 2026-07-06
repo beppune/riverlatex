@@ -1,4 +1,4 @@
-\documentclass[a5paper,14pt]{book}
+\documentclass[a5paper,draft]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{graphicx}
@@ -10,6 +10,13 @@
 \hyphenpenalty=10000
 \exhyphenpenalty=10000
 \setlength{\emergencystretch}{3em}
+
+\includeonly{
+	./TeX\_files/intro,
+	./TeX\_files/poem,
+	./TeX\_files/proemio,
+	./TeX\_files/ch1\_Dello\_Scorrere
+}
 
 \begin{document}
 
@@ -23,7 +30,6 @@
 \frontmatter
 \maketitle
 \tableofcontents
-
 \include{./TeX_files/intro}
 
 \mainmatter
