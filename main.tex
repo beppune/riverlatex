@@ -3,9 +3,14 @@
 \usepackage[italian]{babel}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{imakeidx}
 
-% Comment the following line to not highlight frames
-\usepackage{showframe}
+% Conditional debug
+\makeatletter
+\@ifclasswith{book}{draft}{
+	\usepackage{showframe}
+}
+\makeatother
 
 \hyphenpenalty=10000
 \exhyphenpenalty=10000
@@ -18,6 +23,7 @@
 	./TeX\_files/ch1\_Dello\_Scorrere
 }
 
+\makeindex
 \begin{document}
 
 \title{
@@ -30,6 +36,7 @@
 \frontmatter
 \maketitle
 \tableofcontents
+
 \include{./TeX_files/intro}
 
 \mainmatter
@@ -40,6 +47,7 @@
 \include{./TeX_files/ch1_Dello_Scorrere}
 
 \backmatter
+\printindex
 % bibliography, glossary and index would go here.
 
 \end{document}
